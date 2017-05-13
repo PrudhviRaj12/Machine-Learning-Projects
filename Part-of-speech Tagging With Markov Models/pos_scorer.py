@@ -47,8 +47,8 @@ class Score:
     def print_results(sentence, outputs, posteriors):
         Score.print_helper("", sentence, sentence)
         for algo in sorted(outputs.keys()):
-            #for j in range(0, len(outputs[algo][0])):
-            #    Score.print_helper((algo if j==0 else "") + " (%7.2f)" % posteriors[algo][j], outputs[algo][0][j], sentence)
-            for j in range(0, len(outputs[algo][1])):
-                Score.print_helper("", outputs[algo][1][j], sentence)
+            for j in range(0, len(outputs[algo][0])):
+                Score.print_helper((algo if j==0 else "") + " (%7.2f)" % posteriors[algo][j], outputs[algo][0][j], sentence)
+            #for j in range(0, len(outputs[algo][1])):
+            #    Score.print_helper("", outputs[algo][1][j], sentence)
 
